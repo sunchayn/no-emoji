@@ -1,6 +1,6 @@
 {
     "name": "mazentouati/no-emoji",
-    "description": "Generates a RegEx pattern that detect emoji presence.",
+    "description": "Generates a RegEx pattern that detect emojis presence.",
     "type": "project",
     "license": "MIT",
     "authors": [
