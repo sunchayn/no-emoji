@@ -1,0 +1,23 @@
+{
+    "name": "mazentouati/no-emoji",
+    "description": "Generates a RegEx pattern that detect emoji presence.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mazen Touati",
+            "email": "mazen_touati@hotmail.com"
+        }
+    ],
+    "require": {
+        "mazentouati/simple-2way-config": "^0.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MazenTouati\\NoEmoji\\": "src/"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.2"
+    }
+}
