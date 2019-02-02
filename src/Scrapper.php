@@ -11,7 +11,7 @@ use MazenTouati\NoEmoji\Entities\GroupsFactory;
 
 /**
  * Scrapes the Unicode references file to extract and organize Unicodes
- * 
+ *
  * @author Mazen Touati <mazen_touati@hotmail.com>
  */
 class Scrapper

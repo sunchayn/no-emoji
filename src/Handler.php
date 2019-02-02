@@ -10,7 +10,7 @@ use MazenTouati\NoEmoji\Entities\Group;
 
 /**
  * Uses the scrapped unicodes to generate a RegEx pattern
- * 
+ *
  * @author Mazen Touati <mazen_touati@hotmail.com>
  */
 class Handler

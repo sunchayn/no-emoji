@@ -7,7 +7,7 @@ use MazenTouati\Simple2wayConfig\S2WConfig;
 
 /**
  * A file is a self-contained object that serves as layer between the package and the file system with an extra functionalities relative to the package
- * 
+ *
  * @author Mazen Touati <mazen_touati@hotmail.com>
  */
 class File
