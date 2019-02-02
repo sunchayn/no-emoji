@@ -5,7 +5,7 @@ namespace MazenTouati\NoEmoji\Entities;
 
 /**
  * A utility class that holds and interacts with groups
- * 
+ *
  * @author Mazen Touati <mazen_touati@hotmail.com>
  */
 class GroupsFactory

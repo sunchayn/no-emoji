@@ -5,7 +5,7 @@ namespace MazenTouati\NoEmoji\Entities;
 
 /**
  * A group is a self-contained object that stores and manipulates the data of a single unicodes group
- * 
+ *
  * @author Mazen Touati <mazen_touati@hotmail.com>
  */
 class Group
