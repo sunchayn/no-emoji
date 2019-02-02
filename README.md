@@ -18,6 +18,5 @@ or using PHP built-in server :
 
 ```bash
 cd no-emoji
-php -S localhost:80 -t . index.php
+php -S localhost:80 -t .
 ```
-
