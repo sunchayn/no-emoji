@@ -79,7 +79,7 @@ class File
      * @param  string $fileTitle The file's title
      * @param  array $data The file data
      *
-     * @return bool|array Return false on error or an array the hold the created file details
+     * @return boolean|array Return false on error or an array the hold the created file details
      */
     public static function toJSON(string $path, string $fileTitle, array $data)
     {
@@ -101,7 +101,7 @@ class File
      * @param  string $fileTitle The file's title
      * @param  string $data The file content
      *
-     * @return bool|array Return false on error or an array the hold the created file details
+     * @return boolean|array Return false on error or an array the hold the created file details
      */
     public static function toText(string $path, string $fileTitle, string $data)
     {

@@ -96,7 +96,7 @@ class Scrapper
     /**
      * Exports the unicodes data into JSON file
      *
-     * @return bool|array Returns false on error or the result array
+     * @return boolean|array Returns false on error or the result array
      */
     public function export()
     {
