@@ -103,6 +103,6 @@ class Scrapper
         $base = $this->config->get('storage.base');
         $output = $this->config->get('storage.output.json');
         $fileTitle = $this->config->get('storage.output.jsonFileTitle', 'Undefined Title');
-        return File::toJSON($base.$output, $fileTitle, $this->_unicodes);
+        return File::toJSON($base . $output, $fileTitle, $this->_unicodes);
     }
 }
