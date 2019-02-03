@@ -97,7 +97,7 @@ class Group
      */
     public function extractUnicodes()
     {
-        $unicodesHandled = [];
+        $unicodes = [];
 
         foreach ($this->_patterns as $bits => $pattern) {
             preg_match_all($pattern, $this->_content, $matches);
@@ -136,7 +136,6 @@ class Group
      */
     public function popMultiUnitValues(array &$data, string $bits): array
     {
-        $cleanData = [];
         $multiUnitValues = [];
         $digits = (int)$bits / 4;
 

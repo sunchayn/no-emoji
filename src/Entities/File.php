@@ -99,11 +99,11 @@ class File
      *
      * @param  string $path Output path
      * @param  string $fileTitle The file's title
-     * @param  array $data The file data
+     * @param  string $data The file content
      *
      * @return bool|array Return false on error or an array the hold the created file details
      */
-    public static function toText($path, $fileTitle, $data)
+    public static function toText(string $path, string $fileTitle, string $data)
     {
         $size = file_put_contents($path, $data);
         if ($size === false) {

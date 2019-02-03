@@ -77,7 +77,7 @@ class Handler
         $instance->config = $c;
 
         $file = new File($c, 'storage.output.json');
-        $instance->unicodes = $file->fromJSON(true);
+        $instance->_unicodes = $file->fromJSON(true);
 
         return $instance;
     }
@@ -102,15 +102,15 @@ class Handler
      *
      * @param  string $bitsKey The holder array's key for the bits
      *
-     * @return void
+     * @return bool|void
      */
     private function _splitXbitUnicodes($bitsKey)
     {
-        if (!isset($this->unicodes[$bitsKey])) {
+        if (!isset($this->_unicodes[$bitsKey])) {
             return false;
         }
 
-        $data = $this->unicodes[$bitsKey];
+        $data = $this->_unicodes[$bitsKey];
         sort($data);
 
         $ranges = [
@@ -148,7 +148,7 @@ class Handler
      */
     private function _fusionXbitUnicodes(string $bitsKey)
     {
-        $data = $this->unicodes[$bitsKey];
+        $data = $this->_unicodes[$bitsKey];
 
         $patternString = '';
         foreach ($data as $unicode) {
@@ -202,7 +202,7 @@ class Handler
     {
         $base = $this->config->get('storage.base');
         $output = $this->config->get('storage.output.ranges');
-        $fileTitle = $this->config->get('storage.output.rangesFileTitle');
+        $fileTitle = $this->config->get('storage.output.rangesFileTitle', 'Undefined Title');
 
         $content = '\''. $this->_pattern .'\'';
 
@@ -228,12 +228,12 @@ class Handler
         });
 
         $base = $this->config->get('storage.base');
-        $fileTitle = $this->config->get('storage.output.testFileTitle');
+        $fileTitle = $this->config->get('storage.output.testFileTitle', 'Undefined Title');
         $output = $this->config->get('storage.output.test');
 
         $export = File::toText($base.$output, $fileTitle, $file->content);
 
-        if ($export === false) {
+        if (!is_array($export)) {
             return false;
         }
 
