@@ -222,7 +222,7 @@ class Handler
         $pattern = '(' . $this->_pattern . ').*\n';
         $count = 0;
 
-        $file->replaceContent(function($content) use ($pattern, $replacement, &$count) {
+        $file->replaceContent(function ($content) use ($pattern, $replacement, &$count) {
             $newContent = preg_replace('/' . $pattern . '/mu', $replacement . "\n", $content, -1, $count);
             return iconv(mb_detect_encoding($newContent), 'UTF-16', $newContent);
         });
