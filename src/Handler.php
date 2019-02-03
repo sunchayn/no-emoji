@@ -18,28 +18,28 @@ class Handler
     /**
      * The class instance
      *
-     * @var [Handler]
+     * @var Handler
      */
     private static $_instance = null;
 
     /**
      * Emoji unicodes
      *
-     * @var [array]
+     * @var array
      */
     private $_unicodes = [];
 
     /**
      * Unicodes as intervals
      *
-     * @var [array]
+     * @var array
      */
     private $_ranges = [];
 
     /**
      * The produced pattern
      *
-     * @var [type]
+     * @var string
      */
     private $_pattern = '';
 
