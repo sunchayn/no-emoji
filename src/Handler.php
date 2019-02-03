@@ -114,7 +114,7 @@ class Handler
         sort($data);
 
         $ranges = [
-            [ $data[0] ]
+            [$data[0]]
         ];
         $rangesIndex = 0;
         $lastRangeIndex = 0;
@@ -156,7 +156,7 @@ class Handler
             $bytesPattern = '';
 
             foreach ($bytes as $byte) {
-                $bytesPattern .= '\x{' . $byte .'}';
+                $bytesPattern .= '\x{' . $byte . '}';
             }
 
             $patternString .= '|' . $bytesPattern;
@@ -204,9 +204,9 @@ class Handler
         $output = $this->config->get('storage.output.ranges');
         $fileTitle = $this->config->get('storage.output.rangesFileTitle', 'Undefined Title');
 
-        $content = '\''. $this->_pattern .'\'';
+        $content = '\'' . $this->_pattern . '\'';
 
-        return File::toText($base.$output, $fileTitle, $content);
+        return File::toText($base . $output, $fileTitle, $content);
     }
 
     /**
@@ -219,11 +219,11 @@ class Handler
     {
         $file = new File($this->config);
 
-        $pattern = '('. $this->_pattern .').*\n';
+        $pattern = '(' . $this->_pattern . ').*\n';
         $count = 0;
 
-        $file->replaceContent(function ($content) use ($pattern, $replacement, &$count) {
-            $newContent = preg_replace('/' . $pattern . '/mu', $replacement."\n", $content, -1, $count);
+        $file->replaceContent(function($content) use ($pattern, $replacement, &$count) {
+            $newContent = preg_replace('/' . $pattern . '/mu', $replacement . "\n", $content, -1, $count);
             return iconv(mb_detect_encoding($newContent), 'UTF-16', $newContent);
         });
 
@@ -231,7 +231,7 @@ class Handler
         $fileTitle = $this->config->get('storage.output.testFileTitle', 'Undefined Title');
         $output = $this->config->get('storage.output.test');
 
-        $export = File::toText($base.$output, $fileTitle, $file->content);
+        $export = File::toText($base . $output, $fileTitle, $file->content);
 
         if (!is_array($export)) {
             return false;
