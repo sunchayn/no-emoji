@@ -213,7 +213,7 @@ class Handler
      * Tests the produced pattern efficiency catching the Emojis
      *
      * @param string $replacement The replacement for the Emoji
-     * 
+     *
      * @return boolean|array Returns false on error or an array holds the created file details
      */
     public function testPattern($replacement = '@GOT_YOU')
