@@ -50,7 +50,7 @@ class Scrapper
      *
      * @return Scrapper
      */
-    public static function getInstance()
+    public static function getInstance(): Scrapper
     {
         if (self::$_instance == null) {
             self::$_instance = new Scrapper();
@@ -66,7 +66,7 @@ class Scrapper
      *
      * @return Scrapper
      */
-    public static function factory(S2WConfig $c)
+    public static function factory(S2WConfig $c): Scrapper
     {
         $instance = self::getInstance();
         $instance->config = $c;

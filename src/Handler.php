@@ -100,7 +100,7 @@ class Handler
     /**
      * Divides the unicodes into intervals
      *
-     * @param  string $bitsKey The holder array's key for the bits
+     * @param string $bitsKey The holder array's key for the bits
      *
      * @return bool|void
      */
@@ -173,7 +173,7 @@ class Handler
      *
      * @return void
      */
-    private function _transformRangesToPattern()
+    private function _transformRangesToPattern(): void
     {
         $reducedRanges = [];
         foreach ($this->_ranges as $range) {
@@ -196,7 +196,7 @@ class Handler
     /**
      * Exports the unicodes data into JSON file
      *
-     * @return bool|array Returns false on error or an Array holds the created file details
+     * @return boolean|array Returns false on error or an Array holds the created file details
      */
     public function export()
     {
@@ -212,8 +212,9 @@ class Handler
     /**
      * Tests the produced pattern efficiency catching the Emojis
      *
-     * @param  string $replacement The replacement for the Emojis
-     * @return bool|array Returns false on error or an array holds the created file details
+     * @param string $replacement The replacement for the Emoji
+     * 
+     * @return boolean|array Returns false on error or an array holds the created file details
      */
     public function testPattern($replacement = '@GOT_YOU')
     {

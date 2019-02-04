@@ -63,7 +63,7 @@ class File
     /**
      * Executes a Closure that alter the file content
      *
-     * @param  Closure $callback
+     * @param  \Closure $callback
      *
      * @return void
      */

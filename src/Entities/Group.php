@@ -172,7 +172,7 @@ class Group
      *
      * @return array Output single unit values
      */
-    public function flattenMultiUnitValues($data)
+    public function flattenMultiUnitValues($data): array
     {
         $new = [];
         foreach ($data as $v) {
