@@ -72,7 +72,7 @@ class GroupsFactory
 
     /**
      * Flattens the Unicode array from being group based to bit based
-     * 
+     *
      * @return GroupsFactory
      */
     public function flattenUnicodes()
@@ -101,7 +101,7 @@ class GroupsFactory
 
     /**
      * Transforms single unit values from the multi unit array to the single unit array
-     * 
+     *
      * @param string $multi Multi unit values array's key
      * @param string $single Single unit values array's key
      */
