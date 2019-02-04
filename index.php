@@ -11,6 +11,7 @@ require 'vendor/autoload.php';
 use MazenTouati\Simple2wayConfig\S2WConfigFactory;
 use MazenTouati\NoEmoji\Scrapper;
 use MazenTouati\NoEmoji\Handler;
+use MazenTouati\NoEmoji\Prettifier;
 
 // Initialize the configuration
 $config = S2WConfigFactory::create(__DIR__ . '/config');
@@ -30,6 +31,9 @@ $viewData['handle'] = $handler->export();
 // ---
 $viewData['test']  = $handler->testPattern();
 
+// Prettifier
+// ---
+$viewData['Prettifier'] = Prettifier::factory($config)->run()->export();
 
 // Functions
 // ---
