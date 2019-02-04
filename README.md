@@ -4,6 +4,8 @@
 
 No Emoji is simple package dedicated to generate a RegEx pattern that detect if a string has an Emoji or not. The generated pattern is based on Unicode V11 reference published in this [File](https://unicode.org/Public/emoji/11.0/emoji-test.txt).
 
+![Home](https://raw.githubusercontent.com/mazentouati/no-emoji/master/home.PNG)
+
 ## Installation
 
 Installation through [composer](http://getcomposer.org/) :
