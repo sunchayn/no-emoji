@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace MazenTouati\NoEmoji\Prettifiers;
 
-use MazenTouati\NotEmoji\Entities\File;
-
 /**
  * @author Mazen Touati <mazen_touati@hotmail.com>
  */

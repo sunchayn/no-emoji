@@ -27,6 +27,13 @@ class Prettifier
     private $_file;
 
     /**
+     * Configuration object
+     *
+     * @var S2WConfig
+     */
+    public $config;
+
+    /**
      * The pretty content
      * @var string
      */
@@ -51,7 +58,7 @@ class Prettifier
      *
      * @param S2WConfig $c Configuration object
      *
-     * @return Handler
+     * @return Prettifier
      */
     public static function factory(S2WConfig $c)
     {
